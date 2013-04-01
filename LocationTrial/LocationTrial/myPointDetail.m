@@ -10,15 +10,15 @@
 
 @implementation myPointDetail
 
-@synthesize coordinate, title, subtitle, type, elapsedTime, timer;
+@synthesize coordinate, title, subtitle, type, elapsedTime, timer, isNew;
 
-- (id)initWithLocation:(CLLocationCoordinate2D)pinCoodinate WithTitle:(NSString *)pinTitle WithSubTitle:(NSString *)pinSubTitle WithType:(NSString *)pinType {
+- (id)initWithLocation:(CLLocationCoordinate2D)pinCoordinate WithTitle:(NSString *)pinTitle WithSubTitle:(NSString *)pinSubTitle WithType:(NSString *)pinType {
     
     self = [super init];
     
     if(self) {
         
-        coordinate = pinCoodinate;
+        coordinate = pinCoordinate;
         title = pinTitle;
         subtitle = pinSubTitle;
         type = pinType;
@@ -26,11 +26,23 @@
         
         //To Implement timer for 30 minutes and when fire remove pin unless renew/Repeat
         elapsedTime = [NSTimer scheduledTimerWithTimeInterval:1800 target:self selector: @selector(elapsedTimer:) userInfo:nil repeats:NO];
-        
+        isNew = NO;
     }
     
     return self;
     
+}
+
+- (id)init:(CLLocationCoordinate2D)pinCoordinate
+{
+    self = [super init];
+    
+    if(self) {
+        coordinate = pinCoordinate;
+        isNew = YES;
+    }
+    
+    return self;
 }
 
 - (void)elapsedTimer:(NSTimer *)timer

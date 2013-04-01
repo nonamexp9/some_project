@@ -17,7 +17,10 @@
 @property (nonatomic,retain) NSString *type;
 @property (nonatomic) NSTimer *elapsedTime;
 @property (assign) int timer;
+@property (nonatomic, assign) BOOL *isNew;
 
-- (id)initWithLocation:(CLLocationCoordinate2D) pinCoodinate WithTitle: (NSString *) pinTitle WithSubTitle: (NSString *) pinSubTitle WithType: (NSString *) pinType;
+- (id)initWithLocation:(CLLocationCoordinate2D) pinCoordinate WithTitle: (NSString *) pinTitle WithSubTitle: (NSString *) pinSubTitle WithType: (NSString *) pinType;
+
+- (id)init:(CLLocationCoordinate2D) pinCoordinate;
 
 @end
