@@ -1,7 +1,7 @@
 //
 //  ViewController.m
 //  LocationTrial
-//   pong
+//  
 //  Created by Kan Boonprakub on 3/25/56 BE.
 //  Copyright (c) 2556 Kan Boonprakub. All rights reserved.
 //
