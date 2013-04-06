@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "myPointDetail.h"
+#import "ViewPinDetailViewController.h"
 
 @interface ViewController ()
 
@@ -163,12 +164,12 @@
 
 - (IBAction)viewPinDetail:(id)sender
 {
-    [self performSegueWithIdentifier: @"viewPinDetailSeque" sender: self];
+    [self performSegueWithIdentifier: @"viewPinDetailSegue" sender: self];
 }
 
 - (IBAction)addPinDetail:(id)sender
 {
-    [self performSegueWithIdentifier: @"addPinDetailSeque" sender: self];
+    [self performSegueWithIdentifier: @"addPinDetailSegue" sender: self];
 }
 
 - (void)handleLongPress:(UIGestureRecognizer *)gestureRecognizer
@@ -203,6 +204,19 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)done:(UIStoryboardSegue *)segue
+{
+    if ([[segue identifier] isEqualToString:@"ReturnInput"]) {
+        ViewPinDetailViewController *viewPinController = [segue sourceViewController];
+//        if (addController.birdSighting) {
+//            [self.dataController
+//             addBirdSightingWithSighting:addController.birdSighting];
+//            [[self tableView] reloadData];
+//        }
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }
 }
 
 @end

@@ -14,5 +14,6 @@
 
 @property (retain, nonatomic) IBOutlet MKMapView *mapView;
 
+- (IBAction)done:(UIStoryboardSegue *)segue;
 
 @end
