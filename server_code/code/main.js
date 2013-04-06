@@ -59,7 +59,7 @@ function respond_pins_itempost(req, res, next) {
 
 function respond_pins_item_del(req, res, next) {
     
-   	db.pins.remove(( { '_id': db.ObjectId(req.params.id)});
+   	db.pins.remove( { '_id': db.ObjectId(req.params.id)});
     return next();
 } 
 
