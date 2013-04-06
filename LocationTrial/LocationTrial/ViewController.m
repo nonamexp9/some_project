@@ -181,10 +181,10 @@
     [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
     
     //Initiate the Defined Annotation and specify the detail
-    myPointDetail *dropPin = [[myPointDetail alloc] init];
+    myPointDetail *dropPin = [[myPointDetail alloc] init:touchMapCoordinate];
     dropPin.title = @"New Pin";
     dropPin.subtitle = @"New sub";
-    dropPin.coordinate = touchMapCoordinate;
+    //dropPin.coordinate = touchMapCoordinate;
     [self.mapView addAnnotation:dropPin];
     
     
