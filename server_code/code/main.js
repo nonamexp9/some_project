@@ -5,7 +5,7 @@ var db = require("mongojs").connect(databaseUrl, collections);
 console.log("connected");
 /**
 #############################################################
-###################### Pins Mother  ########################
+###################### Pins method  ########################
 ############################################################
 */
 function respond_pins_get(req, res, next) {
@@ -23,13 +23,43 @@ function respond_pins_put(req, res, next) {
 // create pins
 function respond_pins_post(req, res, next) {
 	
-	  console.log(req.body);
+ console.log(req.body);
 	db.pins.save(req.body);
 	
 	return next();
 }
 
 function respond_pins_del(req, res, next) {
+    return next();
+} 
+
+/**
+#############################################################
+###################### Pins Items method  ########################
+############################################################
+*/
+
+function respond_pins_item_get(req, res, next) {
+
+	db.pins.findOne( { '_id': db.ObjectId(req.params.id)}, function(err, pin) {
+		  res.send(pin);
+	  } );
+	  return next();
+}
+// update Pins
+function respond_pins_item_put(req, res, next) {
+	return next();
+}
+
+// create pins
+function respond_pins_itempost(req, res, next) {
+	
+	return next();
+}
+
+function respond_pins_item_del(req, res, next) {
+    
+   	db.pins.remove(( { '_id': db.ObjectId(req.params.id)});
     return next();
 } 
 
@@ -48,6 +78,12 @@ server.get('/pins/', respond_pins_get);
 server.put('/pins/', respond_pins_put);
 server.post('/pins/', respond_pins_post);
 server.del('/pins/', respond_pins_del);
+
+//pins/items work flow
+server.get('/pins/:id', respond_pins_item_get);
+server.put('/pins/:id', respond_pins_item_put);
+server.post('/pins/:id', respond_pins_itempost);
+server.del('/pins/:id', respond_pins_item_del);
 
 // server.head('/hello/:name', respond); this one is use for calling data of header 
 
