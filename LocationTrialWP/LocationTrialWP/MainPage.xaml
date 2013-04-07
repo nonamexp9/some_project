@@ -5,51 +5,70 @@
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:GoogleTileSource="clr-namespace:LocationTrialWP;assembly=LocationTrialWP"
+    xmlns:Microsoft_Phone_Controls_Maps="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps" 
+    xmlns:MSPCMCore="clr-namespace:Microsoft.Phone.Controls.Maps.Core;assembly=Microsoft.Phone.Controls.Maps"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="728" 
     d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait"  Orientation="Portrait"
-    shell:SystemTray.IsVisible="False">
+    shell:SystemTray.IsVisible="False" xmlns:my="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
- 
-        <!--Panorama control-->
-        <controls:Panorama Title="my application">
-            <!--controls:Panorama.Background>
-                <ImageBrush ImageSource="PanoramaBackground.png"/>
-            </controls:Panorama.Background-->
- 
-            <!--Panorama item one-->
-            <controls:PanoramaItem Header="first item">
-                <!--Double line list with text wrapping-->
-                <ListBox Margin="0,0,-12,0" ItemsSource="{Binding Items}">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Margin="0,0,0,17" Width="432" Height="78">
-                                <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
-                                <TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
-            </controls:PanoramaItem>
- 
-            <!--Panorama item two-->
-            <!--Use 'Orientation="Horizontal"' to enable a panel that lays out horizontally-->
-            <controls:PanoramaItem Header="second item">
-                <!--Double line list with image placeholder and text wrapping-->
+        <!--Pivot Control-->
+        <controls:Pivot Title="MY APPLICATION">
+            <!--Pivot item one-->
+            <controls:PivotItem Header="map">
+                <StackPanel>
+                    <TextBox x:Name="PageTitle" Text="search location"  Height="71" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalAlignment="Top" MaxHeight="Infinity" Width="460" HorizontalScrollBarVisibility="Disabled" VerticalContentAlignment="Center" FontSize="23" Padding="0,2" BorderThickness="3" />
+                    <!-- <my:Map Height="502" HorizontalAlignment="Stretch" Margin="-1,0,0,0" Name="map" VerticalAlignment="Stretch" Width="456" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Visibility="Visible"  CredentialsProvider="AgqoUrRL8LprD6ByCVmqHb4DhMVf2JnUPmGn238x6-q3V6OZy9mObBkfPollFHw9"/> -->
+                    <Microsoft_Phone_Controls_Maps:Map Name="googlemap" Margin="0,0,0,0" CopyrightVisibility="Collapsed" LogoVisibility="Collapsed" ScaleVisibility="Visible" CredentialsProvider="AgqoUrRL8LprD6ByCVmqHb4DhMVf2JnUPmGn238x6-q3V6OZy9mObBkfPollFHw9" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Height="497" Width="454">
+                        <Microsoft_Phone_Controls_Maps:Map.Mode>
+                            <MSPCMCore:MercatorMode/>
+                        </Microsoft_Phone_Controls_Maps:Map.Mode>
+                        <Microsoft_Phone_Controls_Maps:MapTileLayer  Visibility="Collapsed" Name="street" Margin="0,0,0,32" Height="497" Width="456" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                            <Microsoft_Phone_Controls_Maps:MapTileLayer.TileSources>
+                                <GoogleTileSource:GoogleTile TileTypes="Street"/>
+                            </Microsoft_Phone_Controls_Maps:MapTileLayer.TileSources>
+                        </Microsoft_Phone_Controls_Maps:MapTileLayer>
+                        <Microsoft_Phone_Controls_Maps:MapTileLayer Visibility="Collapsed" Name="wateroverlay" Margin="0,0,0,32" Height="497" Width="456" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                            <Microsoft_Phone_Controls_Maps:MapTileLayer.TileSources>
+                                <GoogleTileSource:GoogleTile TileTypes="WaterOverlay"/>
+                            </Microsoft_Phone_Controls_Maps:MapTileLayer.TileSources>
+                        </Microsoft_Phone_Controls_Maps:MapTileLayer>
+                        <Microsoft_Phone_Controls_Maps:MapTileLayer  Name="hybrid" Margin="0,0,0,32" Height="497" Width="456" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                            <Microsoft_Phone_Controls_Maps:MapTileLayer.TileSources>
+                                <GoogleTileSource:GoogleTile TileTypes="Hybrid"/>
+                            </Microsoft_Phone_Controls_Maps:MapTileLayer.TileSources>
+                        </Microsoft_Phone_Controls_Maps:MapTileLayer>
+                        <Microsoft_Phone_Controls_Maps:MapTileLayer Visibility="Collapsed" Name="satellite" Margin="0,0,0,32" Height="497" Width="456" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                            <Microsoft_Phone_Controls_Maps:MapTileLayer.TileSources>
+                                <GoogleTileSource:GoogleTile TileTypes="Satellite"/>
+                            </Microsoft_Phone_Controls_Maps:MapTileLayer.TileSources>
+                        </Microsoft_Phone_Controls_Maps:MapTileLayer>
+                        <Microsoft_Phone_Controls_Maps:MapTileLayer Visibility="Collapsed" Name="physical" Margin="0,0,0,32" Height="497" Width="456" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                            <Microsoft_Phone_Controls_Maps:MapTileLayer.TileSources>
+                                <GoogleTileSource:GoogleTile TileTypes="Physical"/>
+                            </Microsoft_Phone_Controls_Maps:MapTileLayer.TileSources>
+                        </Microsoft_Phone_Controls_Maps:MapTileLayer>
+                    </Microsoft_Phone_Controls_Maps:Map>
+
+                </StackPanel>
+            </controls:PivotItem>
+
+            <!--Pivot item two-->
+            <controls:PivotItem Header="settings">
                 <ListBox Margin="0,0,-12,0" ItemsSource="{Binding Items}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal" Margin="0,0,0,17">
-                                <!--Replace rectangle with image-->
-                                <Rectangle Height="100" Width="100" Fill="#FFE5001b" Margin="12,0,9,0"/>
-                                <StackPanel Width="311">                                    
+                                <CheckBox IsChecked="{Binding Checked}"></CheckBox>
+                                <StackPanel Width="311">
                                     <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
                                     <TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
                                 </StackPanel>
@@ -57,7 +76,18 @@
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-            </controls:PanoramaItem>
-        </controls:Panorama>
+            </controls:PivotItem>
+        </controls:Pivot>
     </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.map.centerme.rest.png" Text="Report"/>
+            <!--<shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems> -->
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
 </phone:PhoneApplicationPage>

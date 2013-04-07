@@ -13,3 +13,20 @@ c:\users\popness\documents\visual studio 2010\Projects\LocationTrialWP\LocationT
 c:\users\popness\documents\visual studio 2010\Projects\LocationTrialWP\LocationTrialWP\obj\Debug\LocationTrialWP.dll
 c:\users\popness\documents\visual studio 2010\Projects\LocationTrialWP\LocationTrialWP\obj\Debug\LocationTrialWP.pdb
 c:\users\popness\documents\visual studio 2010\Projects\LocationTrialWP\LocationTrialWP\obj\Debug\XapCacheFile.xml
+C:\Users\popness\Documents\GitHub\some_project\LocationTrialWP\LocationTrialWP\Bin\Debug\ApplicationIcon.png
+C:\Users\popness\Documents\GitHub\some_project\LocationTrialWP\LocationTrialWP\Bin\Debug\Background.png
+C:\Users\popness\Documents\GitHub\some_project\LocationTrialWP\LocationTrialWP\Bin\Debug\LocationTrialWP.dll
+C:\Users\popness\Documents\GitHub\some_project\LocationTrialWP\LocationTrialWP\Bin\Debug\LocationTrialWP.pdb
+C:\Users\popness\Documents\GitHub\some_project\LocationTrialWP\LocationTrialWP\Bin\Debug\AppManifest.xaml
+C:\Users\popness\Documents\GitHub\some_project\LocationTrialWP\LocationTrialWP\Bin\Debug\LocationTrialWP.xap
+C:\Users\popness\Documents\GitHub\some_project\LocationTrialWP\LocationTrialWP\Bin\Debug\Microsoft.Phone.Controls.dll
+C:\Users\popness\Documents\GitHub\some_project\LocationTrialWP\LocationTrialWP\Bin\Debug\Microsoft.Phone.Controls.xml
+C:\Users\popness\Documents\GitHub\some_project\LocationTrialWP\LocationTrialWP\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\popness\Documents\GitHub\some_project\LocationTrialWP\LocationTrialWP\obj\Debug\App.g.cs
+C:\Users\popness\Documents\GitHub\some_project\LocationTrialWP\LocationTrialWP\obj\Debug\MainPage.g.cs
+C:\Users\popness\Documents\GitHub\some_project\LocationTrialWP\LocationTrialWP\obj\Debug\LocationTrialWP.g.resources
+C:\Users\popness\Documents\GitHub\some_project\LocationTrialWP\LocationTrialWP\obj\Debug\LocationTrialWP.dll
+C:\Users\popness\Documents\GitHub\some_project\LocationTrialWP\LocationTrialWP\obj\Debug\LocationTrialWP.pdb
+C:\Users\popness\Documents\GitHub\some_project\LocationTrialWP\LocationTrialWP\obj\Debug\XapCacheFile.xml
+C:\Users\popness\Documents\GitHub\some_project\LocationTrialWP\LocationTrialWP\Bin\Debug\Microsoft.Phone.Controls.Maps.dll
+C:\Users\popness\Documents\GitHub\some_project\LocationTrialWP\LocationTrialWP\Bin\Debug\Microsoft.Phone.Controls.Maps.xml
