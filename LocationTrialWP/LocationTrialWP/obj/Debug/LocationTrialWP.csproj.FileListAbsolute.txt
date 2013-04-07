@@ -30,3 +30,6 @@ C:\Users\popness\Documents\GitHub\some_project\LocationTrialWP\LocationTrialWP\o
 C:\Users\popness\Documents\GitHub\some_project\LocationTrialWP\LocationTrialWP\obj\Debug\XapCacheFile.xml
 C:\Users\popness\Documents\GitHub\some_project\LocationTrialWP\LocationTrialWP\Bin\Debug\Microsoft.Phone.Controls.Maps.dll
 C:\Users\popness\Documents\GitHub\some_project\LocationTrialWP\LocationTrialWP\Bin\Debug\Microsoft.Phone.Controls.Maps.xml
+C:\Users\popness\Documents\GitHub\some_project\LocationTrialWP\LocationTrialWP\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
+C:\Users\popness\Documents\GitHub\some_project\LocationTrialWP\LocationTrialWP\Bin\Debug\Microsoft.Phone.Controls.Toolkit.pdb
+C:\Users\popness\Documents\GitHub\some_project\LocationTrialWP\LocationTrialWP\Bin\Debug\Microsoft.Phone.Controls.Toolkit.xml

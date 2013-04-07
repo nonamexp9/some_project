@@ -10,6 +10,7 @@
     xmlns:MSPCMCore="clr-namespace:Microsoft.Phone.Controls.Maps.Core;assembly=Microsoft.Phone.Controls.Maps"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="728" 
     d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
@@ -25,8 +26,9 @@
             <!--Pivot item one-->
             <controls:PivotItem Header="map">
                 <StackPanel>
-                    <TextBox x:Name="PageTitle" Text="search location"  Height="71" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalAlignment="Top" MaxHeight="Infinity" Width="460" HorizontalScrollBarVisibility="Disabled" VerticalContentAlignment="Center" FontSize="23" Padding="0,2" BorderThickness="3" />
-                    <!-- <my:Map Height="502" HorizontalAlignment="Stretch" Margin="-1,0,0,0" Name="map" VerticalAlignment="Stretch" Width="456" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Visibility="Visible"  CredentialsProvider="AgqoUrRL8LprD6ByCVmqHb4DhMVf2JnUPmGn238x6-q3V6OZy9mObBkfPollFHw9"/> -->
+                    <toolkit:PhoneTextBox Hint="search location" ActionIcon="/Images/appbar.feature.search.rest.png" Name="searchTextBox" Height="76" Width="453" />
+                    <!--<TextBox x:Name="PageTitle" Text="search location"  Height="71" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalAlignment="Top" MaxHeight="Infinity" Width="460" HorizontalScrollBarVisibility="Disabled" VerticalContentAlignment="Center" FontSize="23" Padding="0,2" BorderThickness="3" />
+                     <my:Map Height="502" HorizontalAlignment="Stretch" Margin="-1,0,0,0" Name="map" VerticalAlignment="Stretch" Width="456" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Visibility="Visible"  CredentialsProvider="AgqoUrRL8LprD6ByCVmqHb4DhMVf2JnUPmGn238x6-q3V6OZy9mObBkfPollFHw9"/> -->
                     <Microsoft_Phone_Controls_Maps:Map Name="googlemap" Margin="0,0,0,0" CopyrightVisibility="Collapsed" LogoVisibility="Collapsed" ScaleVisibility="Visible" CredentialsProvider="AgqoUrRL8LprD6ByCVmqHb4DhMVf2JnUPmGn238x6-q3V6OZy9mObBkfPollFHw9" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Height="497" Width="454">
                         <Microsoft_Phone_Controls_Maps:Map.Mode>
                             <MSPCMCore:MercatorMode/>
