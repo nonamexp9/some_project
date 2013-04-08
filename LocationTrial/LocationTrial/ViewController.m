@@ -209,7 +209,7 @@
 - (IBAction)done:(UIStoryboardSegue *)segue
 {
     if ([[segue identifier] isEqualToString:@"ReturnInput"]) {
-        ViewPinDetailViewController *viewPinController = [segue sourceViewController];
+//        ViewPinDetailViewController *viewPinController = [segue sourceViewController];
 //        if (addController.birdSighting) {
 //            [self.dataController
 //             addBirdSightingWithSighting:addController.birdSighting];

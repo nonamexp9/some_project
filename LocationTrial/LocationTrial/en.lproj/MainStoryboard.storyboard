@@ -31,7 +31,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1204" y="23"/>
+            <point key="canvasLocation" x="-1534" y="-259"/>
         </scene>
         <!--View Controller - Add New Pin-->
         <scene sceneID="dom-yJ-bUA">
@@ -42,11 +42,18 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add New Pin" id="crE-fX-iaN"/>
+                    <navigationItem key="navigationItem" title="Add New Pin" id="crE-fX-iaN">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="yUi-Gx-dij">
+                            <connections>
+                                <segue destination="xF7-0u-mZb" kind="unwind" unwindAction="done:" id="xZP-rw-jZv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfH-Nq-ZXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="xF7-0u-mZb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-11" y="431"/>
+            <point key="canvasLocation" x="-411" y="-71"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="obk-Va-2aj">
@@ -66,8 +73,6 @@
         <!--View Pin Detail View Controller - View Pin Detail-->
         <scene sceneID="CQ4-6i-fa4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O1Y-ed-Db7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="oDA-lc-eAs" userLabel="Exit" sceneMemberID="exit"/>
                 <viewController id="KEc-je-yKk" customClass="ViewPinDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5am-K2-Rvt">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -82,6 +87,8 @@
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O1Y-ed-Db7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="oDA-lc-eAs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-411" y="-827"/>
         </scene>
@@ -101,7 +108,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="naV-KN-mHk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-537" y="431"/>
+            <point key="canvasLocation" x="-867" y="-71"/>
         </scene>
     </scenes>
     <classes>
