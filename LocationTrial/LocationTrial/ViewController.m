@@ -16,17 +16,11 @@
 
 @implementation ViewController
 
-@synthesize mapView, popup, titleLabel, subtitleLabel;
+@synthesize mapView;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    popup.alpha = 0.0;
-    CGRect popupFrame = self.popup.frame;
-    popupFrame.origin.y = self.view.bounds.size.height;
-    
-    popupFrame.origin = popupFrame.origin;
     
     self.mapView.delegate = self;
     
@@ -223,27 +217,6 @@
 //        }
         [self dismissViewControllerAnimated:YES completion:NULL];
     }
-}
-
-- (void) mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
-    
-//    titleLabel.text = view.
-    
-    CGRect popupFrame = self.popup.frame;
-    popupFrame.origin.y = popupFrame.origin.y - popupFrame.size.height + 10;
-    
-    popup.alpha = 1.0;
-    
-    [UIView animateWithDuration:0.5
-                          delay:0.5
-                        options: UIViewAnimationCurveEaseOut
-                     animations:^{
-                         self.popup.frame = popupFrame;
-                     }
-                     completion:^(BOOL finished){
-                         NSLog(@"Done!");
-                     }];
-    
 }
 
 @end
