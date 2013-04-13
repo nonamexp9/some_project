@@ -28,6 +28,7 @@
 		E0981FD817006F8400C8D8E1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0981FD717006F8400C8D8E1 /* MapKit.framework */; };
 		E0981FDA17006F8B00C8D8E1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0981FD917006F8B00C8D8E1 /* CoreLocation.framework */; };
 		E0981FDD170074E900C8D8E1 /* myPointDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = E0981FDC170074E900C8D8E1 /* myPointDetail.m */; };
+		E09BB1B617146D3500CBD1EE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E09BB1B517146D3500CBD1EE /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		E0981FD917006F8B00C8D8E1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E0981FDB170074E900C8D8E1 /* myPointDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myPointDetail.h; sourceTree = "<group>"; };
 		E0981FDC170074E900C8D8E1 /* myPointDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myPointDetail.m; sourceTree = "<group>"; };
+		E09BB1B517146D3500CBD1EE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +106,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				095B039417195ADF006E2495 /* Security.framework in Frameworks */,
 				095B039517195ADF006E2495 /* SystemConfiguration.framework in Frameworks */,
 				095B039017195AC6006E2495 /* CoreData.framework in Frameworks */,
 				095B039117195AC6006E2495 /* MobileCoreServices.framework in Frameworks */,
 				095B038D17195A9B006E2495 /* CFNetwork.framework in Frameworks */,
 				095B038B17195A76006E2495 /* libRestKit.a in Frameworks */,
+=======
+				E09BB1B617146D3500CBD1EE /* QuartzCore.framework in Frameworks */,
+>>>>>>> Slide up for Selected Pin!
 				E0981FDA17006F8B00C8D8E1 /* CoreLocation.framework in Frameworks */,
 				E0981FD817006F8400C8D8E1 /* MapKit.framework in Frameworks */,
 				E0981FB517006F6C00C8D8E1 /* UIKit.framework in Frameworks */,
@@ -153,11 +159,15 @@
 		E0981FB317006F6C00C8D8E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				095B039217195ADF006E2495 /* Security.framework */,
 				095B039317195ADF006E2495 /* SystemConfiguration.framework */,
 				095B038E17195AC6006E2495 /* CoreData.framework */,
 				095B038F17195AC6006E2495 /* MobileCoreServices.framework */,
 				095B038C17195A9B006E2495 /* CFNetwork.framework */,
+=======
+				E09BB1B517146D3500CBD1EE /* QuartzCore.framework */,
+>>>>>>> Slide up for Selected Pin!
 				E0981FD917006F8B00C8D8E1 /* CoreLocation.framework */,
 				E0981FD717006F8400C8D8E1 /* MapKit.framework */,
 				E0981FB417006F6C00C8D8E1 /* UIKit.framework */,
@@ -177,9 +187,9 @@
 				E0981FCC17006F6C00C8D8E1 /* MainStoryboard.storyboard */,
 				E0981FCF17006F6C00C8D8E1 /* ViewController.h */,
 				E0981FD017006F6C00C8D8E1 /* ViewController.m */,
-				E0981FBB17006F6C00C8D8E1 /* Supporting Files */,
 				093D438D1710241A00543248 /* ViewPinDetailViewController.h */,
 				093D438E1710241B00543248 /* ViewPinDetailViewController.m */,
+				E0981FBB17006F6C00C8D8E1 /* Supporting Files */,
 			);
 			path = LocationTrial;
 			sourceTree = "<group>";
