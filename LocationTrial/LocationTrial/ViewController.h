@@ -14,6 +14,9 @@
 @interface ViewController : UIViewController <MKMapViewDelegate>
 
 @property (retain, nonatomic) IBOutlet MKMapView *mapView;
+@property (nonatomic,weak) IBOutlet UIView *popup;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *subtitleLabel;
 
 - (IBAction)done:(UIStoryboardSegue *)segue;
 

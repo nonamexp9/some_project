@@ -16,11 +16,17 @@
 
 @implementation ViewController
 
-@synthesize mapView;
+@synthesize mapView, popup, titleLabel, subtitleLabel;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    popup.alpha = 0.0;
+    CGRect popupFrame = self.popup.frame;
+    popupFrame.origin.y = self.view.bounds.size.height;
+    
+    popupFrame.origin = popupFrame.origin;
     
     self.mapView.delegate = self;
     
@@ -96,7 +102,7 @@
     if ([annotation isKindOfClass:[MKUserLocation class]]) {
         return nil;
     }
-         
+    
     if ([annotation isKindOfClass:[myPointDetail class]]) {
         
         //Deque existing view
@@ -126,7 +132,7 @@
                 [rightButton addTarget:self action:@selector(addPinDetail:)
                       forControlEvents:UIControlEventTouchUpInside];
                 pinView.rightCalloutAccessoryView = rightButton;
-
+                
             }
             //the pin was already added
             else
@@ -146,7 +152,7 @@
                       forControlEvents:UIControlEventTouchUpInside];
                 pinView.rightCalloutAccessoryView = rightButton;
             }
-        
+            
         }
         else {
             
@@ -194,7 +200,7 @@
 - (void) mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
     
     MKCoordinateRegion currentLocationRegion = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 100, 100);
-
+    
     
     [self.mapView setRegion:[self.mapView regionThatFits:currentLocationRegion] animated:YES];
     
@@ -209,14 +215,35 @@
 - (IBAction)done:(UIStoryboardSegue *)segue
 {
     if ([[segue identifier] isEqualToString:@"ReturnInput"]) {
-//        ViewPinDetailViewController *viewPinController = [segue sourceViewController];
-//        if (addController.birdSighting) {
-//            [self.dataController
-//             addBirdSightingWithSighting:addController.birdSighting];
-//            [[self tableView] reloadData];
-//        }
+        //        ViewPinDetailViewController *viewPinController = [segue sourceViewController];
+        //        if (addController.birdSighting) {
+        //            [self.dataController
+        //             addBirdSightingWithSighting:addController.birdSighting];
+        //            [[self tableView] reloadData];
+        //        }
         [self dismissViewControllerAnimated:YES completion:NULL];
     }
+}
+
+- (void) mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
+    
+    //    titleLabel.text = view.
+    
+    CGRect popupFrame = self.popup.frame;
+    popupFrame.origin.y = popupFrame.origin.y - popupFrame.size.height + 10;
+    
+    popup.alpha = 1.0;
+    
+    [UIView animateWithDuration:0.5
+                          delay:0.5
+                        options: UIViewAnimationOptionTransitionCurlUp
+                     animations:^{
+                         self.popup.frame = popupFrame;
+                     }
+                     completion:^(BOOL finished){
+                         NSLog(@"Done!");
+                     }];
+    
 }
 
 @end
