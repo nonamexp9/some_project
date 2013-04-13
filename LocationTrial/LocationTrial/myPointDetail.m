@@ -39,7 +39,7 @@
     
     if(self) {
         coordinate = pinCoordinate;
-        isNew = YES;
+        *isNew = YES;
     }
     
     return self;
