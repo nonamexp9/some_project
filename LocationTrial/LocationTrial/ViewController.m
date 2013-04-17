@@ -35,6 +35,9 @@
     [mapView setScrollEnabled:YES];
     mapView.mapType=MKMapTypeStandard;
     
+    CGRect mapFrame = self.view.frame;
+    [mapView setBounds:mapFrame];
+    
     UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc]
                                           initWithTarget:self action:@selector(handleLongPress:)];
     lpgr.minimumPressDuration = 2.0; //user needs to press for 2 seconds
@@ -225,14 +228,17 @@
     }
 }
 
-- (void) mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
+- (void) mapView:(MKMapView *)map didSelectAnnotationView:(MKAnnotationView *)view {
     
-    //    titleLabel.text = view.
+    myPointDetail * selectedPoint = [map selectedAnnotations].lastObject;
+//    NSLog(@"%@",selectedPoint.title);
+    titleLabel.text = selectedPoint.title;
+    subtitleLabel.text = selectedPoint.subtitle;
     
     CGRect popupFrame = self.popup.frame;
     popupFrame.origin.y = popupFrame.origin.y - popupFrame.size.height + 10;
     
-    popup.alpha = 1.0;
+    [popup setAlpha:1.0];
     
     [UIView animateWithDuration:0.5
                           delay:0.5
